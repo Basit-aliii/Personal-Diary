@@ -1,0 +1,165 @@
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* Soft gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333; /* Dark text for contrast */
+  }
+  
+  /* Container for the whole journal entry area */
+  .container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 360px;
+    text-align: center;
+    border: 1px solid #4CAF50; /* Green border */
+    backdrop-filter: blur(10px); /* Light blur effect behind the container */
+    transition: all 0.3s ease;
+  }
+  
+  .container:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+  }
+  
+  /* Diary styling */
+  .diary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Title styling */
+  h1 {
+    font-size: 30px;
+    color: #6a5acd; /* Stylish purple color */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Textarea styling */
+  textarea {
+    width: 100%;
+    height: 220px; /* Adjusted height for more space */
+    padding: 18px;
+    margin: 15px 0;
+    border: 2px solid #6a5acd; /* Stylish purple border */
+    border-radius: 15px; /* Rounded corners */
+    background-color: #f7f7f7; /* Light gray background */
+    font-size: 16px;
+    line-height: 1.6;
+    resize: none; /* Disable resizing */
+    box-sizing: border-box;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  textarea:focus {
+    border-color: #ff69b4; /* Hot pink on focus */
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.6); /* Pink glow */
+  }
+  
+  /* Button styles */
+  button {
+    padding: 14px 30px;
+    background-color: #6a5acd; /* Stylish purple */
+    color: white;
+    border: none;
+    border-radius: 30px; /* Round button */
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #ff69b4; /* Hot pink on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* Entries list container */
+  #previousEntries {
+    margin-top: 20px;
+    text-align: left;
+    max-height: 250px; /* Fixed height to prevent overflow */
+    overflow-y: auto; /* Allows scrolling inside the container */
+    padding-right: 10px; /* For scroll bar */
+  }
+  
+  #entriesList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #entriesList li {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 15px;
+    font-size: 14px;
+    border: 1px solid #eee; /* Soft border for entries */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Light shadow for entries */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  #entriesList li:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Hover effect for entries */
+  }
+  
+  .deleteButton {
+    background-color: #ff6347; /* Red color for delete button */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: 12px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .deleteButton:hover {
+    background-color: #ff4500; /* Darker red on hover */
+    transform: scale(1.05); /* Zoom effect */
+  }
+  
+  .entryDate {
+    font-size: 12px;
+    color: #888; /* Soft gray for date */
+    margin-top: 5px;
+    font-style: italic;
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 600px) {
+    .container {
+      padding: 25px;
+      width: 90%;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    textarea {
+      height: 180px;
+    }
+  
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+    }
+  }
+  
